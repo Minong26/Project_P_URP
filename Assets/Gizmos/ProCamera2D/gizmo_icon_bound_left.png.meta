@@ -53,3 +53,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 42095
+  packageName: Pro Camera 2D - The definitive 2D & 2.5D camera plugin for Unity
+  packageVersion: 2.9.5
+  assetPath: Assets/Gizmos/ProCamera2D/gizmo_icon_bound_left.png
+  uploadId: 569368
