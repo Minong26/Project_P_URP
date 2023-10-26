@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class jumpCh : MonoBehaviour
@@ -15,7 +13,6 @@ public class jumpCh : MonoBehaviour
 
     private void Update()
     {
-        // 땅에 닿았는지 여부를 확인 (땅 감지 방법은 상황에 따라 다를 수 있음)
         isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.1f);
 
         // 점프

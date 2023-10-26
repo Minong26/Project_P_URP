@@ -51,3 +51,6 @@ TagManager:
   - name: Episode Trigger
     uniqueID: 4294339885
     locked: 0
+  - name: PuzzlePiece
+    uniqueID: 1336342065
+    locked: 0

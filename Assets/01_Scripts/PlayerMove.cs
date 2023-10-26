@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour
 
         rigid.AddForce (Vector2.right * h, ForceMode2D.Impulse);
 
-        if (rigid.velocity.x > maxspeed) // 최강 스피드
+        if (rigid.velocity.x > maxspeed) 
             rigid.velocity = new Vector2(maxspeed, rigid.velocity.y);
         else if (rigid.velocity.x < maxspeed*(-1))
             rigid.velocity = new Vector2(maxspeed*(-1), rigid.velocity.y);

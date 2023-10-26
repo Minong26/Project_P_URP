@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Dragging : MonoBehaviour
 {
     public GameObject originPosition;
+    public GameObject stagePuzzleManager;
 
     private bool moving = false;
     public bool posMatched = false;
@@ -38,8 +37,8 @@ public class Dragging : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-            startPosX = mousePos.x - this.transform.position.x;
-            startPosY = mousePos.y - this.transform.position.y;
+            startPosX = mousePos.x - transform.position.x;
+            startPosY = mousePos.y - transform.position.y;
 
             moving = true;
         }
@@ -48,13 +47,15 @@ public class Dragging : MonoBehaviour
     private void OnMouseUp()
     {
         moving = false;
-        if (Mathf.Abs(this.transform.localPosition.x - originPosition.transform.localPosition.x) <= 0.5f &&
-            Mathf.Abs(this.transform.localPosition.y - originPosition.transform.localPosition.y) <= 0.5f)
+        if (Mathf.Abs(this.transform.localPosition.x - originPosition.transform.localPosition.x) <= 1f &&
+            Mathf.Abs(this.transform.localPosition.y - originPosition.transform.localPosition.y) <= 1f)
         {
-            this.transform.localPosition = new Vector3(originPosition.transform.localPosition.x, originPosition.transform.localPosition.y, originPosition.transform.localPosition.z);
+            this.transform.position = new Vector3(originPosition.transform.position.x, originPosition.transform.position.y, originPosition.transform.position.z);
             posMatched = true;
+
+            stagePuzzleManager.GetComponent<PieceMatching>().AddPoints();
         }
-        else if (gameObject.tag == "ElementalStone")
+        else
         {
             this.transform.localPosition = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
         }

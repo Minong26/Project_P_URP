@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class jumpBu : MonoBehaviour
+public class JumpButton : MonoBehaviour
 {
-    // 애니메이션 
     Animator anim;
 
     public float jumpSpeed = 3f;
