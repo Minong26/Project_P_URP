@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; // 씬 전환을 하기 위함
@@ -9,7 +8,6 @@ public class canvas : MonoBehaviour
     public Image Panel;
     float time = 0f;
     float F_time = 1f;
-
 
     public void Fade()
     {

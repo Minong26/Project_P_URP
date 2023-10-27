@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PuzzleTrigger
+  - BluePortal
+  - OrangePortal
   layers:
   - Default
   - TransparentFX
@@ -48,8 +50,8 @@ TagManager:
   - name: Player
     uniqueID: 3487925105
     locked: 0
-  - name: Episode Trigger
-    uniqueID: 4294339885
+  - name: Portal
+    uniqueID: 1197183295
     locked: 0
   - name: PuzzlePiece
     uniqueID: 1336342065

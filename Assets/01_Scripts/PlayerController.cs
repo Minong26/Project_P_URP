@@ -23,4 +23,17 @@ public class PlayerController : MonoBehaviour
             rigi.AddForce(new Vector3(0, jumpForce, 0));
         }
     }
+
+    private void Move()
+    {
+        //switch (Define.ControllerType)
+        //{
+
+        //}
+    }
+
+    private void Junp()
+    {
+
+    }
 }
