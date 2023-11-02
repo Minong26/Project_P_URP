@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class jumpCh : MonoBehaviour
+public class JumpCh : MonoBehaviour
 {
     public float jumpForce = 10f; // มกวม ศ๛
     private Rigidbody rb;

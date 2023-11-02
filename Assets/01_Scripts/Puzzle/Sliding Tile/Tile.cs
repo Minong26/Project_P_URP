@@ -2,22 +2,25 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class Tile : MonoBehaviour, IPointerClickHandler
 {
-	private	TextMeshProUGUI	textNumeric;
+	public string stageName;
+
+	private Image imageNumeric;
 	private	Board			board;
 	private	Vector3			correctPosition;
 
 	public	bool			IsCorrected { private set; get; } = false;
 
-	private	int	numeric;
+    private	int	numeric;
 	public	int	Numeric
 	{
 		set
 		{
 			numeric			 = value;
-			textNumeric.text = numeric.ToString();
 		}
 		get => numeric;
 	}
@@ -25,14 +28,13 @@ public class Tile : MonoBehaviour, IPointerClickHandler
 	public void Setup(Board board, int hideNumeric, int numeric)
 	{
 		this.board	= board;
-		textNumeric = GetComponentInChildren<TextMeshProUGUI>();
+		imageNumeric = GetComponent<UnityEngine.UI.Image>();
 
 		Numeric = numeric;
-		if ( Numeric == hideNumeric )
-		{
-			GetComponent<UnityEngine.UI.Image>().enabled = false;
-			textNumeric.enabled = false;
-		}
+		if (Numeric != hideNumeric)
+			imageNumeric.sprite = Resources.Load<Sprite>($"Sprites/{stageName}/Tiles/{Numeric}");
+		else
+			imageNumeric.enabled = false;
 	}
 
 	public void SetCorrectPosition()
@@ -42,7 +44,6 @@ public class Tile : MonoBehaviour, IPointerClickHandler
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		// 클릭했을 때 행동
 		board.IsMoveTile(this);
 	}
 

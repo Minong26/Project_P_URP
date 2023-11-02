@@ -5,7 +5,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 2.0f;
     public float jumpForce = 20.0f;
 
-    Rigidbody2D rigi;
+    private bool isOnGround = true;
+
+    private Rigidbody2D rigi;
 
     private void Start()
     {
@@ -21,6 +23,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             rigi.AddForce(new Vector3(0, jumpForce, 0));
+        }
+
+        if (Physics2D.Raycast(transform.position, Vector2.down, 2f))
+        {
+
         }
     }
 

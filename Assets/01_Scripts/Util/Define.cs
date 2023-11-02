@@ -7,4 +7,9 @@ public class Define : MonoBehaviour
         Joystick,
         Button
     }
+
+    public enum UI
+    {
+
+    }
 }
