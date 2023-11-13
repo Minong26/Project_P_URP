@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.0f;
-    public float jumpForce = 20.0f;
+    [serializeField] private float jumpForce = 20.0f;
 
     private bool isOnGround = true;
 
