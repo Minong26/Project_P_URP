@@ -38,28 +38,10 @@ public class JoyStick : MonoBehaviour
             transform.position += new Vector3(dir.x, 0, 0) * playerCtrl.speed * Time.deltaTime;
 
             anim.CrossFade("Walk", .1f);
-
-            //if (_stick.rect.x > 0)
-            //{
-            //    Debug.Log("x");
-            //    sr.flipX = true;
-            //}
-            //else if (_stick.rect.x < 0)
-            //{
-            //    Debug.Log("-x");
-            //    Debug.Log(_stick.rect.x);
-            //    sr.flipX = false;
-            //}
-
-            //if (dir.y > 0.5 && stickLocalPos.magnitude <= radius)
-            //{
-            //    anim.CrossFade("Jump", .1f);
-            //    Invoke("DelayedFunctionToCall", 1f);
-            //}
         }
         else
         {
-            anim.CrossFade("Walk", .1f);
+            anim.CrossFade("Idle", .1f);
         }
     }
 
