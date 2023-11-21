@@ -1141,6 +1141,18 @@ PrefabInstance:
       propertyPath: tilePrefab
       value: 
       objectReference: {fileID: 7474718520974401629, guid: 125ed6f3dbeda1043a13693619b0888d, type: 3}
+    - target: {fileID: 6809776777772117354, guid: cb72e3b199a695549aeb5ac51ad1a3bf, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809776777772117354, guid: cb72e3b199a695549aeb5ac51ad1a3bf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809776777772117354, guid: cb72e3b199a695549aeb5ac51ad1a3bf, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7896163021283041051, guid: cb72e3b199a695549aeb5ac51ad1a3bf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3680,6 +3692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 446150352}
+  - component: {fileID: 446150354}
   - component: {fileID: 446150353}
   m_Layer: 5
   m_Name: InteractionArea
@@ -3719,6 +3732,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446150351}
   m_CullTransparentMesh: 1
+--- !u!114 &446150354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446150351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.34901962}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &454619173
 GameObject:
   m_ObjectHideFlags: 0
@@ -12826,7 +12869,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.2, y: 7.2}
+    oldSize: {x: 2.57, y: 2.99}
     newSize: {x: 2.57, y: 2.99}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16221,7 +16264,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 834, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854413589
 MonoBehaviour:
