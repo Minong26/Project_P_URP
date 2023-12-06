@@ -16,9 +16,6 @@ public class UIController : MonoBehaviour
 	public void OnResultPanel()
 	{
 		resultPanel.SetActive(true);
-
-		textPlaytime.text = $"PLAY TIME : {board.Playtime/60:D2}:{board.Playtime%60:D2}";
-		textMoveCount.text = "MOVE COUNT : "+board.MoveCount;
 	}
 
 	public void OnClickRestart()

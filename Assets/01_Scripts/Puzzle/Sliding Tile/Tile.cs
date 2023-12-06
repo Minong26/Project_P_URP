@@ -1,9 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class Tile : MonoBehaviour, IPointerClickHandler
 {
@@ -16,14 +14,7 @@ public class Tile : MonoBehaviour, IPointerClickHandler
 	public	bool			IsCorrected { private set; get; } = false;
 
     private	int	numeric;
-	public	int	Numeric
-	{
-		set
-		{
-			numeric			 = value;
-		}
-		get => numeric;
-	}
+	public	int	Numeric	{	set	=> numeric = value;	get => numeric;	}
 
 	public void Setup(Board board, int hideNumeric, int numeric)
 	{
