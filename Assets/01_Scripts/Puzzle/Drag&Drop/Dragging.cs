@@ -34,7 +34,6 @@ public class Dragging : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (
         if (!posMatched && Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos;
