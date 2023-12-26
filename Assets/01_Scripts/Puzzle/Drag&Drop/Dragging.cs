@@ -54,9 +54,12 @@ public class Dragging : MonoBehaviour
             Mathf.Abs(this.transform.localPosition.y - originPosition.transform.localPosition.y) <= 1f)
         {
             this.transform.position = new Vector3(originPosition.transform.position.x, originPosition.transform.position.y, originPosition.transform.position.z);
-            posMatched = true;
-
-            stagePuzzleManager.GetComponent<PieceMatching>().AddPoints();
+            
+            if (this.transform.angle == originAngle)
+            {
+                posMatched = true;
+                stagePuzzleManager.GetComponent<PieceMatching>().AddPoints();
+            }
         }
         else
         {
