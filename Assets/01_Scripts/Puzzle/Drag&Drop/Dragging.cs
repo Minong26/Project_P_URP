@@ -5,8 +5,10 @@ public class Dragging : MonoBehaviour
     public GameObject originPosition;
     public GameObject stagePuzzleManager;
 
-    private bool moving = false;
+    public bool selecting = false;
     public bool posMatched = false;
+    
+    private bool moving = false;
     private float startPosX;
     private float startPosY;
 
