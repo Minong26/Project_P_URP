@@ -11,6 +11,7 @@ public class Dragging : MonoBehaviour
     private bool moving = false;
     private float startPosX;
     private float startPosY;
+    private float originAngle;
 
     private Vector3 resetPosition;
 
@@ -33,6 +34,7 @@ public class Dragging : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (
         if (!posMatched && Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos;
