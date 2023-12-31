@@ -10,6 +10,9 @@ public class Define : MonoBehaviour
 
     public enum UI
     {
-
+        Setting,
+        Game,
+        Puzzle,
+        Event
     }
 }

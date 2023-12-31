@@ -26,11 +26,6 @@ public class UI_MoveControl : UI_Base
         }
     }
 
-    private void Start()
-    {
-        
-    }
-
     private void Joystick()
     {
 
